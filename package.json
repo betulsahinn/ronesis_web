@@ -1,0 +1,19 @@
+{
+  "name": "ronesis-project",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "panel"
+  ],
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "panel": "npm run dev --prefix panel",
+    "dev": "ronesis-project kopyası/node_modules/.bin/concurrently \"npm run client\" \"npm run server\" \"npm run panel\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
